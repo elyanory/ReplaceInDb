@@ -9,7 +9,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Console\Output\OutputInterface;
- 
+
 $console = new Application();
 
 $console
@@ -48,7 +48,7 @@ $console
                     $query = $bdd->query('UPDATE '.$table.' SET '.$field.' = REPLACE('.$field.', "'.$search.'", "'.$replace.'")');
 
                     $query->execute();
-                    
+
                     $progress->advance();
                 }
             }

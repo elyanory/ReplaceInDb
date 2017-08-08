@@ -9,5 +9,8 @@ Usage :
 
 Configure parameters.yml with your database.
 
-In your console : 
-```php console.php database:replace MySearchTextInDb ReplaceText```
+In your console :
+
+```bash
+    php console.php database:replace MySearchTextInDb ReplaceText
+```
