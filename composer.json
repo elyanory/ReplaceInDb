@@ -2,6 +2,10 @@
     "name": "twandiz/replace-in-db",
     "description": "Replace all occurrences of the search string with the replacement string in your database.",
     "type": "project",
+    "license": [
+       "LGPL-2.1",
+       "GPL-3.0+"
+    ],
     "authors": [
         {
             "name": "Antoine FRANCE",
