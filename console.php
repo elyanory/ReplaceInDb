@@ -45,7 +45,7 @@ $console
                 $fields = array_keys($result->fetch(PDO::FETCH_ASSOC));
 
                 foreach ($fields as $field) {
-                    $query = $bdd->query('UPDATE '.$table.' SET '.$field.' = REPLACE('.$field.', "'.$search.'", "'.$replace.'")');
+                    $query = $bdd->query(sprintf('UPDATE %s SET %s = REPLACE(%s, "%s", "%s")', $table, $field, $field, $search, $replace));
 
                     $query->execute();
 
@@ -55,7 +55,7 @@ $console
         }
         catch (Exception $e) {
             $progress->finish();
-            $output->writeln('Erreur : ' . $e->getMessage());
+            $output->writeln(sprintf('Erreur : %s', $e->getMessage()));
             return;
         }
 
