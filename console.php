@@ -41,7 +41,7 @@ $console
             $allTables = $allTables->fetchAll(PDO::FETCH_COLUMN);
 
             foreach ($allTables as $table) {
-                $result = $bdd->query('SELECT * FROM '.$table.' LIMIT 1');
+                $result = $bdd->query(sprintf('SELECT * FROM %s LIMIT 1', $table));
                 $fields = array_keys($result->fetch(PDO::FETCH_ASSOC));
 
                 foreach ($fields as $field) {
